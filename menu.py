@@ -9,7 +9,13 @@ while option != 3:
 
     if option == 1:
         print("Ordenar")
-
+        order = 0
+        while order != 4:
+            print("1.- Hamburguesa")
+            print("2.- Pizza")
+            print("3.- Taco")
+            print("4.- Volver")
+            order = int(input("Ingrese el número de la opción que desea ordenar:"))
     elif option == 2:
         print("Ver pedido")
 
