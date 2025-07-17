@@ -187,7 +187,8 @@ while option:
                         more = int(input("Ingrese 1 si quieres agregar alguna porción de tacos o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de tacos... \n")
+                            print("Volviendo a las opciones de tacos...")
+                            print()
                         elif more == 2:
                             break
             elif order2 == 4:
