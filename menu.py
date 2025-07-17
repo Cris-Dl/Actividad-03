@@ -1,5 +1,3 @@
-from ipykernel.eventloops import loop_qt
-
 print(f"Bienvenido al restaurante")
 option = True
 lista = []
@@ -87,17 +85,16 @@ while option:
                     print("1.- Pizza de peperoni")
                     print("2.- Pizza de queso")
                     print("3.- Pizza deluxe")
-                    pizza1 = int(input("Ingrese la opción de la pizza que desea ordenar:"))
+                    pizza1 = int(input("Ingrese la opción de la pizza que desea ordenar: "))
                     print("")
                     if pizza1 == 1:
                         print("Ha seleccionado una pizza de peperoni")
                         pizza1 = "Pizza de peperoni"
                         lista.append(pizza1)
-                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de pizzas...")
-                            print("")
+                            print("Volviendo a las opciones de pizzas... \n")
                         elif more == 2:
                             break
                         else:
@@ -107,11 +104,10 @@ while option:
                         print("Ha seleccionado una pizza de queso")
                         pizza1 = "Pizza de Queso"
                         lista.append(pizza1)
-                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de pizzas...")
-                            print("")
+                            print("Volviendo a las opciones de pizzas... \n")
                         elif more == 2:
                             break
                         else:
@@ -121,11 +117,10 @@ while option:
                         print("Ha seleccionado la pizza deluxe")
                         pizza1 = "Pizza Deluxe"
                         lista.append(pizza1)
-                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de pizzas...")
-                            print("")
+                            print("Volviendo a las opciones de pizzas...\n")
                         elif more == 2:
                             break
                         else:
@@ -133,11 +128,66 @@ while option:
                             break
                     else:
                         print("Valor invalido, vuelva a intentar")
-                        more = int(input("Ingrese 1 si quieres agregar alguna pizza o 2 para regresar al menu:"))
+                        more = int(input("Ingrese 1 si quieres agregar alguna pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de pizzas...")
-                            print("")
+                            print("Volviendo a las opciones de pizzas...\n")
+                        elif more == 2:
+                            break
+            if order2 == 3:
+                tm = True
+                while tm:
+                    print("Taco")
+                    print("1.- Tacos de birria")
+                    print("2.- Tacos al pastor")
+                    print("3.- Tacos de cochinita pibil")
+                    tacos1 = int(input(f"Ingrese la opción de taco que desea ordenar: "))
+                    print("")
+                    if tacos1 == 1:
+                        print("Ha seleccionado tacos de birria")
+                        tacos1 = "tacos de birria"
+                        lista.append(tacos1)
+                        more = int(input("Ingrese 1 si quieres agregar otro taco o 2 para regresar al menu: "))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de tacos... \n")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    elif tacos1 == 2:
+                        print("Ha seleccionado tacos al pastor")
+                        tacos1 = "tacos al pastor"
+                        lista.append(tacos1)
+                        more = int(input("Ingrese 1 si quieres agregar otros tacos o 2 para regresar al menu: "))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de tacos...\n")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    elif tacos1 == 3:
+                        print("Ha seleccionado tacos de cochinita pibil")
+                        tacos1 = "tacos de cochinita pibil"
+                        lista.append(tacos1)
+                        more = int(input("Ingrese 1 si quieres agregar otros tracos o 2 para regresar al menu: "))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de tacos... \n")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    else:
+                        print("Valor invalido, vuelva a intentar")
+                        more = int(input("Ingrese 1 si quieres agregar alguna porción de tacos o 2 para regresar al menu: "))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de tacos... \n")
                         elif more == 2:
                             break
     elif option == 2:
