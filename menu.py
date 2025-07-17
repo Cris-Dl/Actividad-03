@@ -80,6 +80,66 @@ while option:
                             print("")
                         elif more == 2:
                             break
+            if order2 == 2:
+                pm = True
+                while pm:
+                    print("Pizza")
+                    print("1.- Pizza de peperoni")
+                    print("2.- Pizza de queso")
+                    print("3.- Pizza deluxe")
+                    pizza1 = int(input("Ingrese la opción de la pizza que desea ordenar:"))
+                    print("")
+                    if pizza1 == 1:
+                        print("Ha seleccionado una pizza de peperoni")
+                        pizza1 = "Pizza de peperoni"
+                        lista.append(pizza1)
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de pizzas...")
+                            print("")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    elif pizza1 == 2:
+                        print("Ha seleccionado una pizza de queso")
+                        pizza1 = "Pizza de Queso"
+                        lista.append(pizza1)
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de pizzas...")
+                            print("")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    elif pizza1 == 3:
+                        print("Ha seleccionado la pizza deluxe")
+                        pizza1 = "Pizza Deluxe"
+                        lista.append(pizza1)
+                        more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu:"))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de pizzas...")
+                            print("")
+                        elif more == 2:
+                            break
+                        else:
+                            print("Valor invalido, vuelva a intentar. Se ha guardado el pedido")
+                            break
+                    else:
+                        print("Valor invalido, vuelva a intentar")
+                        more = int(input("Ingrese 1 si quieres agregar alguna pizza o 2 para regresar al menu:"))
+                        print("")
+                        if more == 1:
+                            print("Volviendo a las opciones de pizzas...")
+                            print("")
+                        elif more == 2:
+                            break
     elif option == 2:
         print("Ver pedido")
         print()
