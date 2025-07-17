@@ -198,7 +198,7 @@ while option:
         print("Estos son tus pedidos: ", lista)
         print()
     elif option2 == 3:
-        print("Se a confirmado tu pedido, gracias por tu preferencia")
+        print("Se ha confirmado tu pedido, gracias por tu preferencia")
         break
 
     else:
