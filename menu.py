@@ -1,11 +1,11 @@
 print(f"Bienvenido al restaurante")
 option = True
-listFood = []
+foodList = []
 while option:
     print(f"1- Ordenar")
     print(f"2- Ver pedido")
-    print(f"3- Cancelar")
-    print(f"4- Salir")
+    print(f"3- Cancelar pedido")
+    print(f"4- Confirmación de pedido")
 
     option2 = int(input(f"Ingrese el numero de la acción que desea hacer: "))
     print("")
@@ -16,7 +16,7 @@ while option:
             print("1.- Hamburguesa")
             print("2.- Pizza")
             print("3.- Taco")
-            print("4.- Volver")
+            print("4.- Volver al inicio")
             order2 = int(input("Ingrese el número de la opción que desea ordenar:"))
             print("")
             if order2 == 1:
@@ -30,8 +30,8 @@ while option:
                     print("")
                     if burger == 1:
                         print("Ha seleccionado una quesoburguesa")
-                        burger = "Quesoburguesa"
-                        listFood.append(burger)
+                        burger = "quesoburguesa"
+                        foodList.append(burger)
                         more = int(input("Ingrese 1 si quieres agregar otra hamburguesa o 2 para regresar al menu:"))
                         print("")
                         if more == 1:
@@ -44,8 +44,8 @@ while option:
                             break
                     elif burger == 2:
                         print("Ha seleccionado un cuarto de libra")
-                        burger = "Cuarto de Libra"
-                        listFood.append(burger)
+                        burger = "cuarto de libra"
+                        foodList.append(burger)
                         more = int(input("Ingrese 1 si quieres agregar otra hamburguesa o 2 para regresar al menu:"))
                         print("")
                         if more == 1:
@@ -58,8 +58,8 @@ while option:
                             break
                     elif burger == 3:
                         print("Ha seleccionado the classic")
-                        burger = "The Classic"
-                        listFood.append(burger)
+                        burger = "the classic"
+                        foodList.append(burger)
                         more = int(input("Ingrese 1 si quieres agregar otra hamburguesa o 2 para regresar al menu:"))
                         print("")
                         if more == 1:
@@ -90,8 +90,8 @@ while option:
                     print("")
                     if pizza1 == 1:
                         print("Ha seleccionado una pizza de peperoni")
-                        pizza1 = "Pizza de peperoni"
-                        listFood.append(pizza1)
+                        pizza1 = "pizza de peperoni"
+                        foodList.append(pizza1)
                         more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
@@ -103,8 +103,8 @@ while option:
                             break
                     elif pizza1 == 2:
                         print("Ha seleccionado una pizza de queso")
-                        pizza1 = "Pizza de Queso"
-                        listFood.append(pizza1)
+                        pizza1 = "pizza de queso"
+                        foodList.append(pizza1)
                         more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
@@ -116,8 +116,8 @@ while option:
                             break
                     elif pizza1 == 3:
                         print("Ha seleccionado la pizza deluxe")
-                        pizza1 = "Pizza Deluxe"
-                        listFood.append(pizza1)
+                        pizza1 = "pizza deluxe"
+                        foodList.append(pizza1)
                         more = int(input("Ingrese 1 si quieres agregar otra pizza o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
@@ -135,7 +135,7 @@ while option:
                             print("Volviendo a las opciones de pizzas...\n")
                         elif more == 2:
                             break
-            if order2 == 3:
+            elif order2 == 3:
                 tm = True
                 while tm:
                     print("Taco")
@@ -147,8 +147,8 @@ while option:
                     if tacos1 == 1:
                         print("Ha seleccionado tacos de birria")
                         tacos1 = "tacos de birria"
-                        listFood.append(tacos1)
-                        more = int(input("Ingrese 1 si quieres agregar otro taco o 2 para regresar al menu: "))
+                        foodList.append(tacos1)
+                        more = int(input("Ingrese 1 si quieres agregar otros tacos o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
                             print("Volviendo a las opciones de tacos... \n")
@@ -160,7 +160,7 @@ while option:
                     elif tacos1 == 2:
                         print("Ha seleccionado tacos al pastor")
                         tacos1 = "tacos al pastor"
-                        listFood.append(tacos1)
+                        foodList.append(tacos1)
                         more = int(input("Ingrese 1 si quieres agregar otros tacos o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
@@ -173,7 +173,7 @@ while option:
                     elif tacos1 == 3:
                         print("Ha seleccionado tacos de cochinita pibil")
                         tacos1 = "tacos de cochinita pibil"
-                        listFood.append(tacos1)
+                        foodList.append(tacos1)
                         more = int(input("Ingrese 1 si quieres agregar otros tacos o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
@@ -188,23 +188,32 @@ while option:
                         more = int(input("Ingrese 1 si quieres agregar alguna porción de tacos o 2 para regresar al menu: "))
                         print("")
                         if more == 1:
-                            print("Volviendo a las opciones de tacos... \n")
+                            print("Volviendo a las opciones de tacos...")
                         elif more == 2:
                             break
-            if order2 == 4:
-                print("Regresando al menú principal...\n")
+            elif order2 == 4:
+                print("Volviendo al inicio...")
                 break
 
     elif option2 == 2:
         print("Ver pedido")
-        print(listFood)
+        print(f"Este es tu pedido: {foodList} \n")
 
     elif option2 == 3:
         print(f"Cancelar pedido")
+        print(f"Lista de pedido: {foodList}")
+        food = input("¿Qué producto deseas eliminar? ").lower()
+
+        if food in foodList:
+            foodList.remove(food)
+            print(f"\n{food} eliminado del pedido.\n")
+        else:
+            print(f"\n{food} no está en el pedido.\n")
+
 
     elif option2 == 4:
-        print("Ha salido del programa, gracias por visitarnos")
-        option = False
+        print("Se ha confirmado tu pedido, gracias por tu preferencia")
+        break
 
     else:
         print("Ingreso mal un digito, vuelve a intentarlo \n")
